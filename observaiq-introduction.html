@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ObservaIQ™ | Decision Intelligence Infrastructure</title>
+<meta name="description" content="ObservaIQ™ turns operational data into executive briefings and audit-ready compliance evidence. Led by the Executive Intelligence Index™ and GovernanceCore™.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+<!--
+  DRAFT v2. NOT FOR PUBLICATION.
+  Changes from v1 (2026-10-21): EII leads, GovernanceCore second; no list of executive roles or personas;
+  role-picker console replaced by one sample briefing; roadmap items removed from product bullets;
+  energy and utilities strip added; contact email filled in.
+  Before this goes live:
+  1. File provisional patents (target Nov 20, 2026) and have the SaaS/patent attorney review this copy.
+  2. Sign the Paul / Energizing Solutions LLC IP assignment, then revisit the footer ownership line.
+  3. Re-run the trademark clearance (ObservaIQ, incl. AspectIQ). "Executive Intelligence Index" is settled as "Index" but not yet cleared or filed.
+  4. Keep "proprietary methodology" wording until the attorney confirms provisionals are on file; only then change the status wording.
+  5. Remove the robots noindex tag only when you intend the page to be found.
+  6. Title and hero still use "Decision Intelligence Infrastructure". Test a searchable category term before launch.
+  Copy rules used: outcome-level only. No thresholds, weights, windows, refresh intervals, signal counts,
+  scoring bands, prompt/generation logic, architecture detail, role or persona lists, or competitor references.
+  No regulation is named unless the product supports it (NIST CSF 2.0, OWASP, EU AI Act).
+-->
+
+<style>
+  :root{
+    --ink:#0F1E2E;
+    --ink-2:#18304A;
+    --paper:#F2F5F8;
+    --white:#FFFFFF;
+    --slate:#4B5B6B;
+    --line:#D2DAE2;
+    --teal:#0B7A85;
+    --teal-soft:#BFE6EA;
+    --amber:#A85F00;
+    --radius:6px;
+    --measure:62ch;
+    --gutter:clamp(16px,4vw,48px);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.sans{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+  a{color:var(--teal)}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 var(--gutter)}
+  section{padding:clamp(56px,8vw,104px) 0}
+  p{margin:0 0 1em;max-width:var(--measure)}
+
+  /* top bar */
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line)}
+  .mark{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.25rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+  .mark sup{font-size:.55em;font-weight:600;margin-left:1px}
+  .bar nav{display:flex;gap:22px}
+  .bar nav a{font-family:"Bricolage Grotesque",sans-serif;font-size:.95rem;color:var(--slate);text-decoration:none}
+  .bar nav a:hover{color:var(--ink)}
+  @media(max-width:700px){.bar nav{display:none}}
+
+  /* hero */
+  .hero{padding-top:clamp(40px,6vw,80px)}
+  h1{font-weight:800;font-size:clamp(2.4rem,6.4vw,5rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 24px;max-width:15ch}
+  h1 .quiet{color:var(--slate);font-weight:600}
+  .lede{font-size:1.2rem;max-width:56ch;color:var(--ink-2)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+  .btn{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:1rem;padding:13px 22px;border-radius:var(--radius);text-decoration:none;display:inline-block;border:2px solid var(--ink)}
+  .btn.primary{background:var(--ink);color:var(--white)}
+  .btn.primary:hover{background:var(--ink-2)}
+  .btn.ghost{color:var(--ink)}
+  .btn.ghost:hover{background:var(--white)}
+
+  /* sample briefing: the one bold element */
+  .sample{margin-top:clamp(40px,6vw,72px);background:var(--ink);color:var(--white);border-radius:10px;padding:clamp(24px,4vw,48px)}
+  .sample .label{font-family:"Bricolage Grotesque",sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-soft);margin:0 0 14px;max-width:none}
+  .sample .ask{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 22px}
+  .sample .briefing{font-size:1.15rem;line-height:1.7;color:#E3EBF2;max-width:58ch;border-left:3px solid var(--teal);padding-left:18px;margin-bottom:22px}
+  .sample .built{font-family:"Bricolage Grotesque",sans-serif;font-size:.95rem;color:#B9C6D3;max-width:60ch;margin:0}
+  .sample .built strong{color:var(--white);font-weight:600}
+  .note{font-family:"Bricolage Grotesque",sans-serif;font-size:.85rem;color:var(--slate);margin-top:12px;max-width:none}
+
+  /* generic section heads */
+  h2{font-weight:800;font-size:clamp(1.8rem,3.8vw,2.8rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px;max-width:22ch}
+  h3{font-weight:600;font-size:1.3rem;margin:0 0 8px;letter-spacing:-.01em}
+  .intro{color:var(--ink-2);max-width:60ch;margin-bottom:40px}
+
+  /* operators strip */
+  .operators{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px)}
+  .three div{border-top:3px solid var(--teal);padding-top:16px}
+  .three p{color:var(--ink-2);margin:0}
+  @media(max-width:820px){.three{grid-template-columns:1fr}}
+
+  /* framework */
+  .framework{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .plays{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper)}
+  .play{padding:22px 20px;border-right:1px solid var(--line)}
+  .play:last-child{border-right:0}
+  .play h3{font-size:1.15rem}
+  .play p{font-size:.95rem;color:var(--slate);margin:0}
+  @media(max-width:900px){
+    .plays{grid-template-columns:1fr}
+    .play{border-right:0;border-bottom:1px solid var(--line)}
+    .play:last-child{border-bottom:0}
+  }
+
+  /* layers */
+  .layers{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px) clamp(24px,4vw,64px)}
+  .layer{border-top:3px solid var(--ink);padding-top:18px}
+  .layer p{color:var(--ink-2)}
+  .layer ul{margin:0;padding-left:1.1em;color:var(--slate);font-size:.98rem}
+  .layer li{margin-bottom:4px}
+  .tag{font-family:"Bricolage Grotesque",sans-serif;font-size:.85rem;font-weight:600;color:var(--teal);margin-bottom:6px;display:block}
+  @media(max-width:760px){.layers{grid-template-columns:1fr}}
+
+  /* benchmarks */
+  .benchmarks{background:var(--ink);color:var(--white)}
+  .benchmarks h2{color:var(--white)}
+  .benchmarks .intro{color:#C9D5E0}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .fact{border-top:1px solid rgba(255,255,255,.25);padding-top:16px}
+  .fact b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
+  .fact span{font-size:.95rem;color:#C9D5E0;display:block}
+  .fact i{font-size:.85rem;color:#93A5B6;display:block;margin-top:6px}
+  @media(max-width:900px){.facts{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.facts{grid-template-columns:1fr}}
+
+  /* status + roadmap */
+  .status{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--white)}
+  .status div{padding:24px;border-right:1px solid var(--line)}
+  .status div:last-child{border-right:0}
+  .status h3{font-size:1.1rem}
+  .status ul{margin:0;padding-left:1.1em;font-size:.98rem;color:var(--ink-2)}
+  .status li{margin-bottom:6px}
+  .built-h{color:var(--teal)} .verify-h{color:var(--amber)} .plan-h{color:var(--slate)}
+  @media(max-width:820px){
+    .status{grid-template-columns:1fr}
+    .status div{border-right:0;border-bottom:1px solid var(--line)}
+    .status div:last-child{border-bottom:0}
+  }
+  .sectors{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .sectors div{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .sectors p{margin:0;font-size:.98rem;color:var(--ink-2);max-width:none}
+  @media(max-width:700px){.sectors{grid-template-columns:1fr}}
+
+  /* contact + footer */
+  .contact{background:var(--white);border-top:1px solid var(--line)}
+  .contact .box{max-width:720px}
+  footer{padding:36px 0 56px;font-family:"Bricolage Grotesque",sans-serif;font-size:.88rem;color:var(--slate)}
+  footer p{max-width:80ch;margin:0 0 8px}
+
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="bar">
+    <a class="mark" href="#top">ObservaIQ<sup>™</sup></a>
+    <nav aria-label="Page sections">
+      <a href="#layers">Platform</a>
+      <a href="#operators">Regulated operators</a>
+      <a href="#proof">Benchmarks</a>
+      <a href="#status">Status</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Your insights are brilliant. <span class="quiet">Nobody in the boardroom can read them.</span></h1>
+    <p class="lede">The Executive Intelligence Index™ turns operational data into briefings your leadership can act on, and GovernanceCore™ turns the same data into audit-ready compliance evidence. Not another observability tool for engineers. The layer that lets executives act on what the engineers already know.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#contact">Request a briefing</a>
+      <a class="btn ghost" href="#layers">See the platform</a>
+    </div>
+
+    <div class="sample" role="group" aria-label="Sample executive briefing">
+      <p class="label">Executive Intelligence Index™ · Sample briefing</p>
+      <p class="ask">Where are we in control, and where are we exposed?</p>
+      <p class="briefing">Operations are holding across the estate. Cloud spend is running above the industry benchmark, and the gap is recoverable. Two control areas carry open items that need an owner this quarter, and one AI-assisted workflow is waiting for review.</p>
+      <p class="built"><strong>Built from:</strong> operational signals, cloud cost and control evidence, brought together in one briefing with every cited benchmark sourced.</p>
+    </div>
+    <p class="note">Illustrative sample on synthetic data.</p>
+  </div>
+</section>
+
+<section id="layers">
+  <div class="wrap">
+    <h2>Four layers. One decision trail.</h2>
+    <p class="intro">Every figure an executive sees traces back to a signal, the system that produced it, and the decision it should trigger.</p>
+    <div class="layers">
+
+      <article class="layer">
+        <span class="tag">Executive layer</span>
+        <h3>Executive Intelligence Index™</h3>
+        <p>Short prose briefings and signals written for the decisions leadership actually makes, so a leader can walk into the boardroom without hiring a translator.</p>
+        <ul>
+          <li>Briefings in plain language, not dashboards to decode</li>
+          <li>Every cited benchmark carries its source and year</li>
+          <li>Each figure traces to the signal and system behind it</li>
+          <li>Live as operations change</li>
+        </ul>
+      </article>
+
+      <article class="layer">
+        <span class="tag">Govern layer</span>
+        <h3>GovernanceCore™</h3>
+        <p>Compliance evidence that collects itself, so the audit conversation starts from evidence instead of a scramble for screenshots.</p>
+        <ul>
+          <li>NIST CSF 2.0 posture with audit-ready evidence</li>
+          <li>OWASP Top 10 tracking</li>
+          <li>EU AI Act tagging of AI-assisted actions, with a disclosure shown to users</li>
+          <li>Audits itself first, and shows the gap list instead of hiding it</li>
+        </ul>
+      </article>
+
+      <article class="layer">
+        <span class="tag">Operate layer</span>
+        <h3>OperationsHub</h3>
+        <p>Where reliability work happens, so the executive layer reflects real operations rather than slideware.</p>
+        <ul>
+          <li>Service level objectives and error budgets</li>
+          <li>Alert routing to PagerDuty, Slack and GitHub</li>
+          <li>Incident workflow, on-call and post-incident reviews</li>
+        </ul>
+      </article>
+
+      <article class="layer">
+        <span class="tag">Monetize layer</span>
+        <h3>FinOpsLens™</h3>
+        <p>Your cloud bill is a decision, not an invoice. Cost is attributed to services and teams, measured against a sourced industry benchmark, and turned into a figure finance can put in front of a board.</p>
+        <ul>
+          <li>Cost by service and team</li>
+          <li>Waste measured against an industry benchmark</li>
+          <li>Avoided-downtime value from resolved incidents</li>
+          <li>A finance-ready report with every number cited</li>
+        </ul>
+      </article>
+
+    </div>
+    <p class="note" style="margin-top:40px">Instrumented with <strong>InstrumentLayer™</strong>: OpenTelemetry-first, with no proprietary agents. Access is role-based and tenant-isolated.</p>
+  </div>
+</section>
+
+<section class="operators" id="operators">
+  <div class="wrap">
+    <h2>Built for operators who answer to regulators and boards.</h2>
+    <p class="intro">Energy &amp; Utilities is a live demo sector. The aim is the same for any regulated operator: know where you stand before someone asks.</p>
+    <div class="three">
+      <div>
+        <h3>Evidence on demand</h3>
+        <p>Control posture and its supporting evidence, ready when an auditor or a board asks.</p>
+      </div>
+      <div>
+        <h3>Briefings, not dashboards</h3>
+        <p>Operations, cost and control status in language leadership can act on.</p>
+      </div>
+      <div>
+        <h3>Gaps shown, not hidden</h3>
+        <p>Open items are listed with an owner, because an honest gap list is worth more than a clean-looking one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="framework" id="framework">
+  <div class="wrap">
+    <h2>Built on the Playmaker’s Framework™</h2>
+    <p class="intro">Applied Observability™ is the practice: connecting what systems report to the decisions an organization makes. The Playmaker’s Framework™ is how it becomes a plan: five plays, so leadership can see where the organization stands.</p>
+    <div class="plays">
+      <div class="play"><h3>Align</h3><p>Agree what matters and who decides.</p></div>
+      <div class="play"><h3>Instrument</h3><p>Capture the signals with open standards.</p></div>
+      <div class="play"><h3>Operationalize</h3><p>Run reliability as a managed discipline.</p></div>
+      <div class="play"><h3>Monetize</h3><p>Put a dollar value on waste and downtime.</p></div>
+      <div class="play"><h3>Future-Proof</h3><p>Stay governed as the rules and the tech change.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="benchmarks" id="proof">
+  <div class="wrap">
+    <h2>Every number has a source.</h2>
+    <p class="intro">ObservaIQ™ cites its benchmarks with source and year. No source, no claim. These are the published figures the platform builds on.</p>
+    <div class="facts">
+      <div class="fact"><b>$14,056/min</b><span>Enterprise downtime cost benchmark</span><i>BigPanda / EMA, 2024</i></div>
+      <div class="fact"><b>27%</b><span>Average enterprise cloud waste</span><i>Flexera, 2024</i></div>
+      <div class="fact"><b>7% / 3% / 1%</b><span>EU AI Act penalty tiers. Not GDPR’s 4%.</span><i>Article 99</i></div>
+      <div class="fact"><b>59 controls</b><span>NIST CSF 2.0 control inventory</span><i>NIST CSF 2.0</i></div>
+    </div>
+    <p class="note" style="color:#93A5B6;margin-top:28px">The downtime figure is a general enterprise benchmark, not your actual cost and not specific to any one sector. Tenant-specific figures are planned, and the product will say which basis is in use.</p>
+  </div>
+</section>
+
+<section id="status">
+  <div class="wrap">
+    <h2>Honest status: pre-GA.</h2>
+    <p class="intro">Demo environments run on synthetic data. Pricing is not published, and we are not inventing a number for a web page.</p>
+    <div class="status">
+      <div>
+        <h3 class="built-h">Built</h3>
+        <ul>
+          <li>Executive briefings and signals</li>
+          <li>Governance evidence mapping and audit trail</li>
+          <li>Cloud cost ingestion and the finance report</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="verify-h">In verification</h3>
+        <ul>
+          <li>Single board-level synthesis</li>
+          <li>Cross-signal callouts</li>
+          <li>End-to-end proof of the EU AI Act audit path</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="plan-h">Planned</h3>
+        <ul>
+          <li>Board-ready PDF export</li>
+          <li>Additional cloud and security connectors</li>
+          <li>FinOps and revenue alignment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sectors">
+      <div>
+        <h3>Live demo sectors</h3>
+        <p>Energy &amp; Utilities, Financial Services, Manufacturing, SaaS/DevOps, e-Commerce, FinOps/RevOps.</p>
+      </div>
+      <div>
+        <h3>On the roadmap</h3>
+        <p>Supply Chain, Healthcare, Smart Cities, Aerospace, GovTech, AgriTech and Water Systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="box">
+      <h2>See a briefing built for your decisions.</h2>
+      <p class="intro">Design partner conversations are open. Tell us which decision keeps landing on your desk without the evidence behind it.</p>
+      <p><a href="mailto:paul.esteves@energizing-solutions.com">paul.esteves@energizing-solutions.com</a></p>
+      <p>Paul A. Esteves, Founder, Energizing Solutions LLC</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Energizing Solutions LLC. ObservaIQ™, Executive Intelligence Index™, Applied Observability™, The Playmaker’s Framework™, GovernanceCore™, InstrumentLayer™ and FinOpsLens™ are trademarks claimed by Energizing Solutions LLC. Proprietary methodology.</p>
+    <p>Pre-GA. Demo data is synthetic. Benchmarks are third-party published figures cited with source and year.</p>
+  </div>
+</footer>
+
+</body>
+</html>
