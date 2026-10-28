@@ -8,7 +8,7 @@
 <meta name="description" content="ObservaIQ™ turns operational data into executive briefings and audit-ready compliance evidence. Led by the Executive Intelligence Index™ and GovernanceCore™.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!--
   DRAFT v2. NOT FOR PUBLICATION.
@@ -169,6 +169,31 @@
   .contact .box{max-width:1020px}
   footer{padding:36px 0 56px;font-family:"Bricolage Grotesque",sans-serif;font-size:.88rem;color:var(--slate)}
   footer p{max-width:80ch;margin:0 0 8px}
+
+  /* Let's Talk: copied from the Energizing Solutions site, scoped so it does not touch the rest of the page */
+  #lets-talk{
+    --gold-400:#c9a84c;--gold-300:#dfc06a;--lt-bg:#072A6C;--lt-white:#f5f4f0;
+    --lt-font-display:'Cormorant Garamond',Georgia,serif;--lt-font-body:'Montserrat',sans-serif;
+    --lt-transition:0.35s cubic-bezier(0.4,0,0.2,1);
+    position:relative;z-index:1;padding:96px 48px;background:var(--lt-bg);color:var(--lt-white);
+    font-family:var(--lt-font-body);font-weight:300;line-height:1.7;
+  }
+  #lets-talk .lt-inner{max-width:1160px;margin:0 auto}
+  #lets-talk .lt-contact{max-width:640px;margin:0 auto;text-align:center}
+  #lets-talk .lt-label{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-size:0.65rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:14px}
+  #lets-talk .lt-label::before{content:'';display:block;width:28px;height:1px;background:var(--gold-400)}
+  #lets-talk .lt-title{font-family:var(--lt-font-display);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.15;letter-spacing:-0.01em;color:var(--lt-white);margin:0 0 20px;max-width:none}
+  #lets-talk .lt-title em{font-style:italic;color:var(--gold-300)}
+  #lets-talk .lt-sub{font-size:0.9rem;color:var(--lt-white);line-height:1.85;max-width:520px;margin:0 auto 48px}
+  #lets-talk .lt-actions{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+  #lets-talk .btn-gold{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:transparent;border:1px solid var(--gold-400);color:var(--gold-300);font-family:var(--lt-font-body);font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background var(--lt-transition),color var(--lt-transition)}
+  #lets-talk .btn-gold:hover{background:var(--gold-400);color:var(--lt-white)}
+  #lets-talk .lt-reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s cubic-bezier(0.4,0,0.2,1),transform 0.65s cubic-bezier(0.4,0,0.2,1)}
+  #lets-talk .lt-reveal.visible{opacity:1;transform:translateY(0)}
+  #lets-talk .lt-d1{transition-delay:0.1s}
+  #lets-talk .lt-d2{transition-delay:0.18s}
+  #lets-talk .lt-d4{transition-delay:0.34s}
+  @media(max-width:768px){#lets-talk{padding:64px 24px}}
 
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
@@ -383,6 +408,27 @@
     </div>
   </div>
 </section>
+
+<!-- LET'S TALK -->
+<section id="lets-talk">
+  <div class="lt-inner">
+    <div class="lt-contact">
+      <div class="lt-label lt-reveal">Let's Talk</div>
+      <div class="box">
+      <h2>See a briefing built for your decisions.</h2>
+      <p class="intro">Design partner conversations are open. Tell us which decision keeps landing on your desk without the evidence behind it.</p>
+      <p>Paul A. Esteves, Founder, Energizing Solutions LLC</p>
+    </div>
+      <h2 class="lt-title lt-reveal lt-d1"><em>Start a Conversation</em></h2>
+      <p class="lt-sub lt-reveal lt-d2">Whether you're navigating a program at risk, standing up a PMO, or need an experienced operator to lead a complex transformation — let's find out if we're a fit.</p>
+      <div class="lt-actions lt-reveal lt-d4">
+        <a href="mailto:paul.esteves@energizing-solutions.com?subject=%5BWebsite%5D%20New%20Inquiry%20from%20ObservaIQ&body=Hi%20Paul%2C%0A%0AI%20found%20you%20via%20your%20website.%0A%0AName%3A%20%0ACompany%3A%20%0AWhat%20I%20need%20help%20with%3A%20%0A%0A" class="btn-gold" onclick="gtag('event','contact_click',{method:'email'});">Get In Touch</a>
+        <a href="https://calendly.com/paesteves/30min" class="btn-gold" onclick="gtag('event','contact_click',{method:'calendly'});">Schedule a Call</a>
+        <a href="https://github.com/PauloE-droid" class="btn-gold" onclick="gtag('event','contact_click',{method:'github'});">View My Work</a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -391,6 +437,17 @@
     <p>Pre-GA. Demo data is illustrative mock data. Benchmarks are third-party published figures cited with source and year.</p>
   </div>
 </footer>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('#lets-talk .lt-reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}});
+    },{threshold:0.15});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
 
 </body>
 </html>
